@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="30dp"
-                    android:background="@drawable/background_gradient_rounded_large"
+                    android:background=""
                     android:layout_marginBottom="24dp"> <!-- Asume un drawable con el color de fondo y el borde grande redondeado de la imagen -->
 
                     <!-- Nombre del Producto -->
@@ -135,7 +135,7 @@
                     <ImageView
                         android:layout_width="180dp"
                         android:layout_height="250dp"
-                        android:src="@drawable/refrigeradora_ejemplo"
+                        android:src=""
                         android:scaleType="fitCenter"
                         android:layout_gravity="center_horizontal"
                         android:background="@android:color/white"
