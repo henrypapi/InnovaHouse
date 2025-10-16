@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="-130dp"
+            android:text="INNOVA"
+            android:textColor="#FFFFFF"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="-4dp"
+            android:text="HOUSE"
+            android:textColor="#FFFFFF"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="-4dp"
+            android:letterSpacing="0.7"
+            android:lineSpacingExtra="4dp"
+            android:text="electrodomesticos"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.1"
+            android:text="Bienvenido"
+            android:textColor="#FFFFFF"
+
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="start"
+            android:background="@drawable/edittext_modelo"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColor="#333333"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="start"
+            android:background="@drawable/edittext_modelo"
+            android:hint="Contraseña"
+            android:inputType="text"
+            android:padding="20dp"
+            android:textColor="#333333"
+            android:textSize="19sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@drawable/button_modelo"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_gravity="start"
+            android:text="Iniciar Sesion"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
