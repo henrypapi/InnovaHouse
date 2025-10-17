@@ -18,7 +18,7 @@
             android:layout_height="130dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="100dp"
-            android:background="@drawable/Logo" />
+            android:background="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -101,6 +101,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
+            android:id="@+id/btnIniciar"
             android:layout_height="66dp"
             android:background="@drawable/button_modelo"
             android:layout_marginStart="32dp"
@@ -111,6 +112,17 @@
             android:layout_marginTop="20dp"
 
             />
+        <TextView
+            android:id="@+id/tvRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta? Regístrate aquí"
+            android:textColor="#FF9800"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 
