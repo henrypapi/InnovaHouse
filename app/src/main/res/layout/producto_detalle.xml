@@ -62,8 +62,34 @@
         android:gravity="center_vertical"
         android:background="@android:color/transparent">
 
+        <!-- Botón Editar -->
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            app:icon="@drawable/editar"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Botón Eliminar -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:icon="@drawable/borrar"/>
+
         <!-- Botón Comprar -->
         <Button
+            android:id="@+id/btnComprar"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="2"
@@ -72,19 +98,21 @@
             android:textColor="@android:color/black"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="8dp" />
 
-        <!-- Botón Añadir al Carrito (Carrito de Compras) -->
+        <!-- Botón Añadir al Carrito -->
         <Button
+            android:id="@+id/btnCarrito"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="  "
+            android:text=" "
             android:background="#FF5C5C"
-            android:drawableStart="@drawable/carrito_de_compras"
+            android:drawableStart="@drawable/carritodecompras"
             android:drawablePadding="0dp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp" />
+
     </LinearLayout>
 
 
@@ -117,11 +145,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="30dp"
-                    android:background=""
-                    android:layout_marginBottom="24dp"> <!-- Asume un drawable con el color de fondo y el borde grande redondeado de la imagen -->
+
+                    android:layout_marginBottom="24dp"
+
+                    > <!-- Asume un drawable con el color de fondo y el borde grande redondeado de la imagen -->
 
                     <!-- Nombre del Producto -->
                     <TextView
+                        android:id="@+id/txtNombreDetalle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Refrigeradora"
@@ -133,9 +164,9 @@
 
                     <!-- Imagen del Producto -->
                     <ImageView
+                        android:id="@+id/imgProductoDetalle"
                         android:layout_width="180dp"
                         android:layout_height="250dp"
-                        android:src=""
                         android:scaleType="fitCenter"
                         android:layout_gravity="center_horizontal"
                         android:background="@android:color/white"
@@ -144,6 +175,7 @@
 
                     <!-- Precio (Caja Verde/Cyan) -->
                     <TextView
+                        android:id="@+id/txtPrecioDetalle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="S/. 1800"
@@ -162,13 +194,13 @@
 
                 <!-- Sección Descripción -->
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txtDescripcionDetalle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Descripción"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
+                    android:text="Aquí se mostrará la descripción del producto."
+                    android:textSize="16sp"
                     android:textColor="#333333"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp" />
 
                 <!-- Placeholder para Descripción -->
                 <View
