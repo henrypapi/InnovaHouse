@@ -19,37 +19,7 @@
         android:paddingEnd="4dp"
         android:gravity="center_vertical">
 
-        <ImageView
-            android:id="@+id/btnmenu"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_iconos"
-            android:src="@drawable/hogar" />
-
-        <ImageView
-            android:id="@+id/btniconos"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_iconos"
-            android:src="@drawable/aplicaciones" />
-
-        <ImageView
-            android:id="@+id/btnperfil"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_iconos"
-            android:src="@drawable/usuario" />
-
-        <ImageView
-            android:id="@+id/btncarrito"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_iconos"
-            android:src="@drawable/carrito_de_compras" />
+        <include layout="@layout/menu_bar"/>
     </LinearLayout>
 
     <LinearLayout

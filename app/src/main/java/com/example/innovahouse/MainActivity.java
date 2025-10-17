@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     ProductoAdapter adapter;
     TextView tvBienvenida;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         tvBienvenida = findViewById(R.id.tvBienvenida);
+
+
 
         // 🔹 Obtener datos del usuario desde el Login
         String nombreUsuario = getIntent().getStringExtra("userName");
@@ -61,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
         // 🔹 Cargar productos
         cargarProductos();
+
+        // Clase de navegacion entre las vistas de la aplicacion
+        Menu_navegacion.setupMenu(this);
 
     }
 

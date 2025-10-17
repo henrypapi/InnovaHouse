@@ -81,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, RegistroActivity.class);
             startActivity(intent);
         });
+        Menu_navegacion.setupMenu(this);
     }
 
 }

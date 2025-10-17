@@ -48,6 +48,7 @@ public class ProductoDetalleActivity extends AppCompatActivity {
 
         btnEditar.setOnClickListener(v -> mostrarDialogoEditar());
         btnEliminar.setOnClickListener(v -> confirmarEliminar());
+        Menu_navegacion.setupMenu(this);
     }
 
     private void cargarDetalleProducto(int id) {

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnovaHouse">
         <activity
+            android:name=".menu_perfil"
+            android:exported="false" />
+        <activity
             android:name=".RegistroActivity"
             android:exported="false" />
         <activity
