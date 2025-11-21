@@ -27,6 +27,7 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Aquí enlazamos con tu diseño item_carrito.xml
         View v = LayoutInflater.from(context).inflate(R.layout.item_carrito, parent, false);
         return new ViewHolder(v);
     }
@@ -34,29 +35,51 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder h, int position) {
         Producto p = lista.get(position);
-        h.txtNombre.setText(p.getNombre());
-        h.txtPrecio.setText("S/. " + p.getPrecio());
 
+        // Asignamos los textos
+        h.txtNombre.setText(p.getNombre());
+        // Formato a 2 decimales para que se vea profesional (ej. 1500.00)
+        h.txtPrecio.setText(String.format("S/. %.2f", p.getPrecio()));
+
+        // Lógica para la Imagen (Maneja tanto recursos drawable como URIs de galería)
         String path = p.getImagen();
 
-        // mostrar interna
+        boolean imagenCargada = false;
+
+        // 1. Intentar cargar como URI (si viene de la galería)
         if (path != null && !path.isEmpty()) {
-            File f = new File(path);
-            if (f.exists()) {
-                h.imgProducto.setImageURI(Uri.fromFile(f));
-                return;
+            try {
+                if (path.startsWith("content://") || path.startsWith("file://")) {
+                    h.imgProducto.setImageURI(Uri.parse(path));
+                    imagenCargada = true;
+                }
+                // 2. Intentar cargar como archivo local
+                else {
+                    File f = new File(path);
+                    if (f.exists()) {
+                        h.imgProducto.setImageURI(Uri.fromFile(f));
+                        imagenCargada = true;
+                    }
+                }
+            } catch (Exception e) {
+                imagenCargada = false;
             }
         }
 
-        // fallback drawable
-        String key = p.getNombre().toLowerCase().replace(" ", "");
-        int resId = context.getResources().getIdentifier(key, "drawable", context.getPackageName());
-        if (resId != 0) {
-            h.imgProducto.setImageResource(resId);
-            return;
+        // 3. Si no es URI, intentar cargar como recurso Drawable (ej. "lavadora")
+        if (!imagenCargada && path != null) {
+            String key = path.toLowerCase().replace(" ", ""); // limpieza básica
+            int resId = context.getResources().getIdentifier(key, "drawable", context.getPackageName());
+            if (resId != 0) {
+                h.imgProducto.setImageResource(resId);
+                imagenCargada = true;
+            }
         }
 
-        h.imgProducto.setImageResource(R.drawable.noimage);
+        // 4. Si todo falla, imagen por defecto
+        if (!imagenCargada) {
+            h.imgProducto.setImageResource(R.drawable.noimage);
+        }
     }
 
     @Override
@@ -65,6 +88,7 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        // Referencias a los elementos dentro de item_carrito.xml
         TextView txtNombre, txtPrecio;
         ImageView imgProducto;
 

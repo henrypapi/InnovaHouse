@@ -106,7 +106,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text=" "
+            android:text="Carrito"
             android:background="#FF5C5C"
             android:drawableStart="@drawable/carritodecompras"
             android:drawablePadding="0dp"
@@ -223,6 +223,7 @@
                     android:textStyle="bold"
                     android:textColor="#333333"
                     android:layout_marginBottom="16dp"/>
+
 
                 <!-- Placeholder para Detalles Técnicos -->
                 <View

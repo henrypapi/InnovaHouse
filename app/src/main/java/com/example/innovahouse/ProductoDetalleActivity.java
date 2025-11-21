@@ -28,6 +28,7 @@ public class ProductoDetalleActivity extends AppCompatActivity {
 
     int productoId;
     String imagenActual = "";
+    Button btnAnadirCarrito;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class ProductoDetalleActivity extends AppCompatActivity {
         btnIconos = findViewById(R.id.btniconos);
         btnPerfil = findViewById(R.id.btnperfil);
         btnCarrito = findViewById(R.id.btncarrito);
+        btnAnadirCarrito = findViewById(R.id.btnCarrito);
 
         SharedPreferences prefs = getSharedPreferences("session", MODE_PRIVATE);
         String rol = prefs.getString("rol", "usuario");
@@ -78,6 +80,29 @@ public class ProductoDetalleActivity extends AppCompatActivity {
 
         btnIconos.setOnClickListener(v ->
                 Toast.makeText(this, "Función no implementada", Toast.LENGTH_SHORT).show());
+
+        btnAnadirCarrito.setOnClickListener(v -> {
+            // 1. Obtener el precio limpio (quitando el "S/. ")
+            String precioTexto = txtPrecio.getText().toString().replace("S/. ", "");
+            double precioFinal = 0.0;
+            try {
+                precioFinal = Double.parseDouble(precioTexto);
+            } catch (NumberFormatException e) {
+                precioFinal = 0.0;
+            }
+
+            // 2. Insertar en la Base de Datos usando el método que creamos en DBHelper
+            String nombreFinal = txtNombre.getText().toString();
+
+            // Llamamos al método agregarAlCarrito del DBHelper
+            dbHelper.agregarAlCarrito(nombreFinal, precioFinal, imagenActual);
+
+            Toast.makeText(this, "Producto añadido al carrito", Toast.LENGTH_SHORT).show();
+
+            // Opcional: Si quieres ir al carrito inmediatamente, descomenta esto:
+            // startActivity(new Intent(this, CarritoActivity.class));
+        });
+
     }
 
     private void cargarDetalleProducto(int id) {
