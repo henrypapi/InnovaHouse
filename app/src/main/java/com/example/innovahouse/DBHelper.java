@@ -114,4 +114,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM carrito");
         db.close();
     }
+    public void eliminarProductoCarrito(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // Borramos donde el 'id' coincida
+        db.delete("carrito", "id=?", new String[]{String.valueOf(id)});
+        db.close();
+    }
 }

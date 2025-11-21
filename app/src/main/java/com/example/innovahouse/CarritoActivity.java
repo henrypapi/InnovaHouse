@@ -76,7 +76,7 @@ public class CarritoActivity extends AppCompatActivity {
         actualizarTotal();
     }
 
-    private void actualizarTotal() {
+    public void actualizarTotal() {
         double total = 0;
         if (listaCarrito != null) {
             for (Producto p : listaCarrito) {
