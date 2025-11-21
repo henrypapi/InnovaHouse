@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color_3"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".RegistroActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="1dp"
+        app:cardBackgroundColor="#D6F4ECB3"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REGISTRO DE USUARIO"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#0361A4" />
+
+            <EditText
+                android:id="@+id/et_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:textColorHint="@color/black"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/black"
+                android:hint="Nombres"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_clave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:hint="Clave"
+                android:layout_marginTop="5dp"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_registrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#009688"
+                    android:text="Registrar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btn_buscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#009688"
+                    android:text="Buscar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btn_editar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#009688"
+                    android:text="Editar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btn_eliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#009688"
+                    android:text="Eliminar"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_margin="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Ya tienes cuenta? Inicia sesión aquí"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+                android:textColor="#0361A4"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

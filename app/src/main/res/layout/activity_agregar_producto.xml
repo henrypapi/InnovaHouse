@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/background_gradient_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/edittext_modelo">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar nuevo producto"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Vista previa de imagen -->
+        <ImageView
+            android:id="@+id/imagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/noimage"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón seleccionar imagen -->
+        <Button
+            android:id="@+id/btnSeleccionarImagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar imagen"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#00796B"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del producto"
+            android:padding="10dp"
+            android:background="@drawable/edittext_modelo"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:background="@drawable/edittext_modelo"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="10dp"
+            android:background="@drawable/edittext_modelo"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar producto"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
